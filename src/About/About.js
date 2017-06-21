@@ -5,7 +5,7 @@ import CircularProgress from 'material-ui/CircularProgress';
 import {connect} from 'react-redux'
 import Search from '../components/Search.js';
 import Echarts from '../components/Echarts';
-import {searchGitUser} from '../redux/actions/actions.js'
+import {searchGitUser,getTitle} from '../redux/actions/actions.js'
 
 class About extends React.Component {
   constructor(){
@@ -32,7 +32,9 @@ class About extends React.Component {
     }
   }
   componentDidMount(){
+    this.props.dispatch(getTitle('Me'))
     this.props.dispatch(searchGitUser('happywanghao',this.showUserData.bind(this)))
+
     window.onresize=()=>{
     this.props.dispatch({type:'INNERWIDTH',content:window.innerWidth})
     }
