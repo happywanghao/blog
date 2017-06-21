@@ -80,13 +80,16 @@ a:hover,a:focus,a:active,a:visited{
 .content-main{
   flex-grow: 1;
   overflow-y: auto;
+  position: relative;
 }
 .home-container{
   background-image: url(./images/home-bg.jpg);
   background-size: cover;
   background-position: 50% 50%;
   width: 100%;
-  height: 100vh;
+  position: absolute;
+  top:0;
+  bottom:0;
   display: flex;
 }
 .home-cover{
