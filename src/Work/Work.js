@@ -13,8 +13,12 @@ class Work extends React.Component {
     this.props.dispatch({type:'INNERWIDTH',content:window.innerWidth})
     }
   }
-  handleSubmit(){
-
+  handleSubmit(e){
+    e.preventDefault()
+    if(this.state.input){
+    let reg=new RegExp(this.state.input,'g')
+      this.showWorkCard=this.props.workCard.filter(item=>(item.title.search(reg)!==-1))
+    }
 }
   handleChange(e){
     let value=e.target.value.replace(/(\s|\?|\*|\(|\)|\[|\]|\{|\}|\+|\$|\^)/g,'')

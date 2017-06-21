@@ -20,21 +20,21 @@ class Blog extends React.Component {
     window.onresize=()=>{
     this.props.dispatch({type:'INNERWIDTH',content:window.innerWidth})
     }
-    let red=/\?/
-    let aa='?'
-    console.log(aa.replace(red,'222222'));
   }
-  handleSubmit(){
-    let reg=new RegExp(this.state.input.toLocaleLowerCase(),'g')
-      this.showBlogCard=this.props.blogCard.filter(item=>{
-        if(item.title.toLocaleLowerCase().search(reg)!==-1){
-          return true
-        }else if(item.desc.toLocaleLowerCase().search(reg)!==-1){
-          return true
-        }else{
-          return false
-        }
+  handleSubmit(e){
+    e.preventDefault()
+    if(this.state.input){
+      let reg=new RegExp(this.state.input.toLocaleLowerCase(),'g')
+        this.showBlogCard=this.props.blogCard.filter(item=>{
+          if(item.title.toLocaleLowerCase().search(reg)!==-1){
+            return true
+          }else if(item.desc.toLocaleLowerCase().search(reg)!==-1){
+            return true
+          }else{
+            return false
+          }
       })
+    }
 }
   handleChange(e){
     let value=e.target.value.replace(/(\s|\?|\*|\(|\)|\[|\]|\{|\}|\+|\$|\^)/g,'')
