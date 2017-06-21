@@ -17,7 +17,7 @@
     "redux": "^3.7.0",
     "redux-thunk": "^2.2.0"
   },
-  "homepage": "http://happywanghao.github.io",
+  "homepage": "http://happywanghao.github.io/blog",
   "devDependencies": {
     "react-scripts": "1.0.7"
   },
