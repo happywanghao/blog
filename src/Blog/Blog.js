@@ -75,18 +75,20 @@ class Blog extends React.Component {
       }
     }
     return(
-      <div style={{width:'100%',marginTop:'20px'}}>
-        <div style={styles.search}>
-          <form onSubmit={this.handleSubmit.bind(this)}>
-            <TextField hintText="search Biog"
-              style={styles.field}
-              value={this.state.input}
-              onChange={this.handleChange.bind(this)}
-              inputStyle={{color:'#00BCD4'}}/>
-              <RaisedButton type='submit' label="搜索" primary={true} style={{margin: 12}}/>
-          </form>
-        </div>
-        { this.props.blogCard ? newBlogCard.map( (item,i) => <BlogCard {...item} index={i} key={i} /> ) : '请稍等' }
+      <div style={{position:'absolute',top:'0',width:'100%',bottom:'0',overflowY:'auto'}}>
+        <div style={{width:'100%',marginTop:'20px'}}>
+          <div style={styles.search}>
+            <form onSubmit={this.handleSubmit.bind(this)}>
+              <TextField hintText="search Biog"
+                style={styles.field}
+                value={this.state.input}
+                onChange={this.handleChange.bind(this)}
+                inputStyle={{color:'#00BCD4'}}/>
+                <RaisedButton type='submit' label="搜索" primary={true} style={{margin: 12}}/>
+              </form>
+            </div>
+            { this.props.blogCard ? newBlogCard.map( (item,i) => <BlogCard {...item} index={i} key={i} /> ) : '请稍等' }
+          </div>
       </div>
     )
   }

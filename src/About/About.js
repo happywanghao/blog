@@ -67,6 +67,7 @@ class About extends React.Component {
       }
     }
     return(
+      <div style={{position:'absolute',top:'0',width:'100%',bottom:'0',overflowY:'auto'}}>
         <div className='clearfix' style={styles.root}>
           <h2 style={styles.title}>Search Github Info</h2>
           <div style={styles.search}>
@@ -82,6 +83,7 @@ class About extends React.Component {
           {gitContent}
           <Echarts />
         </div>
+      </div>
     )
   }
 }

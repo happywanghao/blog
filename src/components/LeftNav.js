@@ -6,8 +6,8 @@ class LeftNav extends React.Component {
     return(
       <div className="left-nav">
         <h3>wangHao@{this.props.title}</h3>
-        <NavLink exact to="/" activeStyle={{backgroundColor:'rgba(0,0,0,0.3)'}} >Home</NavLink>
-        <NavLink to="/blog" activeStyle={{backgroundColor:'rgba(0,0,0,0.3)'}}>Blog</NavLink>
+        <NavLink exact to="/" activeStyle={{backgroundColor:'rgba(0,0,0,0.3)'}} ><span className="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;Home</NavLink>
+        <NavLink to="/blog" activeStyle={{backgroundColor:'rgba(0,0,0,0.3)'}}><span className="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp;&nbsp;Blog</NavLink>
         <NavLink to="/work" activeStyle={{backgroundColor:'rgba(0,0,0,0.3)'}}><span className="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;Work</NavLink>
         <NavLink to="/about" activeStyle={{backgroundColor:'rgba(0,0,0,0.3)'}}><span className="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;Me</NavLink>
       </div>

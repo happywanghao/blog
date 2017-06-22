@@ -48,18 +48,20 @@ class Work extends React.Component {
     :
     this.props.workCard
     return(
-      <div className='row'>
-        <div style={styles.search}>
-          <form onSubmit={this.handleSubmit.bind(this)}>
-            <TextField hintText="search Work"
-              style={styles.field}
-              value={this.state.input}
-              onChange={this.handleChange.bind(this)}
-              inputStyle={{color:'#00BCD4'}}/>
-              <RaisedButton type='submit' label="搜索" primary={true} style={{margin: 12}}/>
-          </form>
+      <div style={{position:'absolute',top:'0',bottom:'0',width:'100%',overflowY:'auto'}}>
+        <div className='row'>
+          <div style={styles.search}>
+            <form onSubmit={this.handleSubmit.bind(this)}>
+              <TextField hintText="search Work"
+                style={styles.field}
+                value={this.state.input}
+                onChange={this.handleChange.bind(this)}
+                inputStyle={{color:'#00BCD4'}}/>
+                <RaisedButton type='submit' label="搜索" primary={true} style={{margin: 12}}/>
+            </form>
+          </div>
+          {this.props.workCard ? newWorkCard.map( (item,index) => <WorkCard {...item} index={index} key={index} />) : '请稍等...'}
         </div>
-        {this.props.workCard ? newWorkCard.map( (item,index) => <WorkCard {...item} index={index} key={index} />) : '请稍等...'}
       </div>
     )
   }

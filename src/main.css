@@ -79,7 +79,6 @@ a:hover,a:focus,a:active,a:visited{
 }
 .content-main{
   flex-grow: 1;
-  overflow-y: auto;
   position: relative;
 }
 .home-container{
