@@ -26,7 +26,7 @@ class BlogInfo extends React.Component {
     return(
       <div style={{position:'absolute',top:'0',width:'100%',bottom:'0',overflowY:'auto'}}>
         <div className='post-content'>
-          <RaisedButton label="返回" onClick={()=>{this.props.history.goBack()}} secondary={true} style={{margin: 12}} />
+          {this.props.innerWidth>760 ? <RaisedButton label="返回" onClick={()=>{this.props.history.goBack()}} secondary={true} style={{margin: 12}} /> : null}
           {this.props.blogMd.title===this.props.match.params.url ?  <div dangerouslySetInnerHTML={{__html:this.content}} /> : <p style={styles.loading}>loading...</p> }
         </div>
       </div>
@@ -39,6 +39,7 @@ marked.setOptions({
   }
 });
 const mapStateToProps=(store)=>({
-  blogMd:store.blogMd
+  blogMd:store.blogMd,
+  innerWidth:store.innerWidth
 })
 export default connect(mapStateToProps)(BlogInfo)
