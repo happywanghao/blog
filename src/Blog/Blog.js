@@ -24,11 +24,11 @@ class Blog extends React.Component {
   handleSubmit(e){
     e.preventDefault()
     if(this.state.input){
-      let reg=new RegExp(this.state.input.toLocaleLowerCase(),'g')
+      let reg=new RegExp(this.state.input,'gi')
         this.showBlogCard=this.props.blogCard.filter(item=>{
-          if(item.title.toLocaleLowerCase().search(reg)!==-1){
+          if(item.title.search(reg)!==-1){
             return true
-          }else if(item.desc.toLocaleLowerCase().search(reg)!==-1){
+          }else if(item.desc.search(reg)!==-1){
             return true
           }else{
             return false
@@ -39,11 +39,11 @@ class Blog extends React.Component {
   handleChange(e){
     let value=e.target.value.replace(/(\s|\?|\*|\(|\)|\[|\]|\{|\}|\+|\$|\^)/g,'')
     if(value){
-    let reg=new RegExp(value.toLocaleLowerCase(),'g')
+    let reg=new RegExp(value,'gi')
       this.showBlogCard=this.props.blogCard.filter(item=>{
-        if(item.title.toLocaleLowerCase().search(reg)!==-1){
+        if(item.title.search(reg)!==-1){
           return true
-        }else if(item.desc.toLocaleLowerCase().search(reg)!==-1){
+        }else if(item.desc.search(reg)!==-1){
           return true
         }else{
           return false

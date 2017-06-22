@@ -16,14 +16,14 @@ class Work extends React.Component {
   handleSubmit(e){
     e.preventDefault()
     if(this.state.input){
-    let reg=new RegExp(this.state.input,'g')
+    let reg=new RegExp(this.state.input,'gi')
       this.showWorkCard=this.props.workCard.filter(item=>(item.title.search(reg)!==-1))
     }
 }
   handleChange(e){
     let value=e.target.value.replace(/(\s|\?|\*|\(|\)|\[|\]|\{|\}|\+|\$|\^)/g,'')
     if(value){
-    let reg=new RegExp(value,'g')
+    let reg=new RegExp(value,'gi')
       this.showWorkCard=this.props.workCard.filter(item=>(item.title.search(reg)!==-1))
     }
     this.setState({input:value})
