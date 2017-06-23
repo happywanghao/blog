@@ -24,14 +24,6 @@ function getBlogCardReducer(state=false,action){
       return state
   }
 }
-function getBlogMdReducer(state={},action){
-  switch(action.type){
-    case 'BLOGMD':
-      return action.content
-    default:
-      return state
-  }
-}
 function getWorkCardReducer(state=false,action){
   switch(action.type){
     case 'WORKCARD':
@@ -40,9 +32,11 @@ function getWorkCardReducer(state=false,action){
       return state
   }
 }
-function getWorkMdReducer(state={},action){
+function getMdDataReducer(state={},action){
   switch(action.type){
     case 'WORKMD':
+      return action.content
+    case 'BLOGMD':
       return action.content
     default:
       return state
@@ -60,8 +54,7 @@ export default combineReducers({
   innerWidth:innerWidthReducer,
   title:titleReducer,
   blogCard:getBlogCardReducer,
-  blogMd:getBlogMdReducer,
   workCard:getWorkCardReducer,
-  workMd:getWorkMdReducer,
+  mdData:getMdDataReducer,
   userData:getGitHubUserReducer
 })

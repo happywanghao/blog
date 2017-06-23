@@ -222,3 +222,20 @@ a:hover,a:focus,a:active,a:visited{
 .row{
   margin: 0;
 }
+.backTop{
+    cursor: pointer;
+    position: fixed;
+    text-decoration: none;
+    right: 20px;
+    bottom: 80px;
+    width: 37px;
+    height: 38px;
+    background: url(//img1.bdstatic.com/static/searchresult/img/result-huge-bg_2c8c18f.png) no-repeat 1px 0;
+    _background-image: url(//img0.bdstatic.com/img/image/imgsearch/normal/result-huge-bg-ie6.png);
+    z-index: 999;
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+.backTop:hover{
+  opacity: 1;
+}

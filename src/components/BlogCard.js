@@ -41,7 +41,7 @@ class BlogCard extends React.Component {
         marginBottom:'20px'
       }
     }
-     let address=`bloginfo/${this.props.url}`
+     let address=`/detailed/blog/${this.props.url}`
     return(
       <div style={styles.root}>
         <div style={styles.index}><span style={styles.num}>{this.props.index+1}</span></div>

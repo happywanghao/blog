@@ -10,8 +10,7 @@ import Home from './Home/Home';
 import Blog from './Blog/Blog';
 import Work from './Work/Work';
 import About from './About/About';
-import BlogInfo from './components/BlogInfo';
-import WorkInfo from './components/WorkInfo';
+import Detailed from './components/Detailed';
 class App extends React.Component {
   constructor(){
     super()
@@ -33,8 +32,7 @@ class App extends React.Component {
               <Route path="/blog" component={Blog} />
               <Route path="/work" component={Work} />
               <Route path="/about" component={About} />
-              <Route path='/bloginfo/:url' component={BlogInfo} />
-              <Route path='/workinfo/:url' component={WorkInfo} />
+              <Route path='/detailed/:cat/:url' component={Detailed} />
             </div>
           {this.props.innerWidth>=760 ? null : <NavFooter /> }
         </div>
