@@ -76,7 +76,7 @@ class Blog extends React.Component {
       }
     }
     return(
-      <div style={{position:'absolute',top:'0',width:'100%',bottom:'0',overflowY:'auto'}}>
+      <div style={{position:'absolute',top:'0',width:'100%',bottom:'0',overflowY:'auto',paddingLeft:'0.5vw',boxSizing:'border-box'}}>
         <div style={{width:'100%',marginTop:'20px'}}>
           <div style={styles.search}>
             <form onSubmit={this.handleSubmit.bind(this)}>

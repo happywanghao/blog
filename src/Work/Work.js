@@ -49,7 +49,7 @@ class Work extends React.Component {
     :
     this.props.workCard
     return(
-      <div style={{position:'absolute',top:'0',bottom:'0',width:'100%',overflowY:'auto'}}>
+      <div style={{position:'absolute',top:'0',bottom:'0',width:'100%',overflowY:'auto',paddingLeft:'0.5vw',boxSizing:'border-box'}}>
         <div className='row'>
           <div style={styles.search}>
             <form onSubmit={this.handleSubmit.bind(this)}>

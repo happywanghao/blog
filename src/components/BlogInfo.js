@@ -39,7 +39,6 @@ marked.setOptions({
   }
 });
 const mapStateToProps=(store)=>({
-  blogMd:store.blogMd,
-  innerWidth:store.innerWidth
+  blogMd:store.blogMd
 })
 export default connect(mapStateToProps)(BlogInfo)
