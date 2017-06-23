@@ -9,8 +9,7 @@ const getWorkCard=()=>(
       dispatch({type:"WORKCARD",content:res.data})
     })
     .catch(function (error) {
-      console.log(888888888888);
-      alert(error);
+      console.log(error);
     })
   }
 )
@@ -22,7 +21,7 @@ const getBlogCard=()=>(
     .then(res => {
       dispatch({type:"BLOGCARD",content:res.data})
     })
-    .catch(err=>{alert(err)});
+    .catch(err=>{  console.log(err);});
   }
 )
 const getTitle=(title)=>(
@@ -38,7 +37,7 @@ const getBlogMd=(add)=>(
       dispatch({type:'BLOGMD',content:{data:res.data,title:add}})
     })
     .catch(function (error) {
-      alert(error);
+        console.log(error);
     });
   }
 )
@@ -49,7 +48,7 @@ const getWorkMd=(add)=>(
       dispatch({type:'WORKMD',content:{data:res.data,title:add}})
     })
     .catch(function (error) {
-      alert(error);
+        console.log(error);
     });
   }
 )
@@ -62,7 +61,7 @@ const searchGitUser=(userName,fun)=>(
       dispatch({type:"GITHUBUSERDATA",content:res.data})
     })
     .catch(function (error) {
-      alert(error);
+        console.log(error);
     });
   }
 )

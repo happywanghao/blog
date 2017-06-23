@@ -1,6 +1,7 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import CircularProgress from 'material-ui/CircularProgress';
 import {connect} from 'react-redux'
 import BlogCard from '../components/BlogCard';
 import {getBlogCard,getTitle} from '../redux/actions/actions.js';
@@ -87,7 +88,8 @@ class Blog extends React.Component {
                 <RaisedButton type='submit' label="搜索" primary={true} style={{margin: 12}}/>
               </form>
             </div>
-            { this.props.blogCard ? newBlogCard.map( (item,i) => <BlogCard {...item} index={i} key={i} /> ) : '请稍等' }
+            { this.props.blogCard ? newBlogCard.map( (item,i) => <BlogCard {...item} index={i} key={i} /> ) :
+            <div style={{textAlign:'center',paddingTop:'30vh'}}><CircularProgress size={50} /></div>}
           </div>
       </div>
     )

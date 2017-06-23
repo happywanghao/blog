@@ -2,6 +2,7 @@ import React from 'react';
 import WorkCard from '../components/WorkCard';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import CircularProgress from 'material-ui/CircularProgress';
 import {connect} from 'react-redux'
 import {getWorkCard,getTitle} from '../redux/actions/actions.js';
 class Work extends React.Component {
@@ -60,7 +61,8 @@ class Work extends React.Component {
                 <RaisedButton type='submit' label="搜索" primary={true} style={{margin: 12}}/>
             </form>
           </div>
-          {this.props.workCard ? newWorkCard.map( (item,index) => <WorkCard {...item} index={index} key={index} />) : '请稍等...'}
+          {this.props.workCard ? newWorkCard.map( (item,index) => <WorkCard {...item} index={index} key={index} />) :
+        <div style={{textAlign:'center',paddingTop:'30vh'}}><CircularProgress size={50} /></div>}
         </div>
       </div>
     )
