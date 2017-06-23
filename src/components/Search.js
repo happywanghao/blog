@@ -8,7 +8,7 @@ class Search extends React.Component {
     let public_repos=this.props.userData.public_repos
     let followers=this.props.userData.followers
     let following=this.props.userData.following
-
+    let html_url=this.props.userData.html_url
     let styles={
       root:{
         textAlign:'center'
@@ -29,7 +29,9 @@ class Search extends React.Component {
     return(
       <div style={styles.root}>
         <p style={styles.name}>{login}</p>
-        <img alt="头像" src={avatar_url} style={styles.img} />
+        <a title='跳转到Github' href={html_url}>
+          <img alt="头像" src={avatar_url} style={styles.img} />
+        </a>
         <Paper className='gitinfo'>
           <div className='gitinfo-card'>
             <p>repos</p><span>{public_repos}</span>

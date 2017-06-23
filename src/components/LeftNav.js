@@ -5,6 +5,7 @@ class LeftNav extends React.Component {
   render () {
     return(
       <div className="left-nav">
+        <div className='nav-button'>Side navigation</div>
         <h3>wangHao@{this.props.title}</h3>
         <NavLink exact to="/" activeStyle={{backgroundColor:'rgba(0,0,0,0.3)'}} ><span className="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;Home</NavLink>
         <NavLink to="/blog" activeStyle={{backgroundColor:'rgba(0,0,0,0.3)'}}><span className="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp;&nbsp;Blog</NavLink>

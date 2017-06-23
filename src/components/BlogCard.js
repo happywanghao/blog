@@ -12,20 +12,20 @@ class BlogCard extends React.Component {
       },
       index:{
         backgroundColor:'#00bcd4',
-        height:'80px',
+        height:'50px',
         textAlign:'center',
         borderRadius: '10px 10px 0 0',
         paddingTop:'10px'
       },
       num:{
-        lineHeight:'60px',
-        width:'60px',
-        height:'60px',
+        lineHeight:'35px',
+        width:'35px',
+        height:'35px',
         borderRadius:'50%',
         border: '2px solid #fff',
         display:'block',
-        fontSize:'20px',
-        margin:'0px auto',
+        fontSize:'16px',
+        margin:'0 auto',
         color:'#fff'
       },
       content:{

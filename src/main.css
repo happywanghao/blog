@@ -15,7 +15,7 @@ a:hover,a:focus,a:active,a:visited{
   }
 }
 .nav-header{
-  height: 80px;
+  height: 70px;
   background-color: #00bcd4;
   flex-shrink:0;
   display: flex;
@@ -37,7 +37,7 @@ a:hover,a:focus,a:active,a:visited{
   cursor: pointer;
 }
 .nav-footer{
-  height: 80px;
+  height: 70px;
   background-color: #00bcd4;
   flex-shrink:0;
   display: flex;
@@ -55,11 +55,34 @@ a:hover,a:focus,a:active,a:visited{
   border: none;
 }
 .left-nav{
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 300px;
   flex-shrink: 0;
   background-color: #00bcd4;
+  margin-left: -300px;
+  transition: all 0.2s;
+}
+.left-nav .nav-button{
+  width:500px;
+  height: 20px;
+  line-height: 20px;
+  background: #00bcd4;
+  position: absolute;
+  right: -260px;
+  top:50%;
+  z-index: 2;
+  transform:rotate(-90deg);
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing:2px;
+}
+.left-nav:hover{
+  margin-left: 0;
 }
 .left-nav h3{
   color:#fff;
