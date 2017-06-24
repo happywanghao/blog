@@ -21,9 +21,9 @@ class Detailed extends React.Component {
   }
   onScroll(){
     if(document.querySelector('#detailed').scrollTop>650){
-      document.querySelector('.backTop').style.display='block'
+      $('.backTop').show(300)
     }else{
-      document.querySelector('.backTop').style.display='none'
+      $('.backTop').hide(300)
     }
   }
 
