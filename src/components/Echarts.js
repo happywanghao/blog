@@ -30,7 +30,7 @@ class Echarts extends React.Component {
       xAxis : [
         {
           type : 'category',
-          data : ['HTML', 'CSS', 'JS', 'React', 'Jquery', 'Node', 'Mongo'],
+          data : ['HTML', 'CSS', 'JS', 'React', 'Jquery', 'Node', 'Mongo','vue'],
           axisTick: {
             alignWithLabel: true
           }
@@ -51,7 +51,7 @@ class Echarts extends React.Component {
           name:'技能熟练度',
           type:'bar',
           barWidth: '60%',
-          data:[90, 90, 88, 90, 80, 70, 50]
+          data:[90, 90, 88, 90, 80, 70, 50,50]
         }
       ]
     }

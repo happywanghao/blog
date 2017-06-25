@@ -7,7 +7,7 @@ class WorkCard extends React.Component {
     return(
       <div className="col-sm-6 col-md-4">
         <div className="thumbnail">
-          <img alt='头像' src={this.props.img} />
+          {/* <img alt='头像' src={this.props.img} /> */}
           <div className="caption">
             <h3 dangerouslySetInnerHTML={{__html:this.props.title}}/>
             <p>
