@@ -44,8 +44,6 @@ class Blog extends React.Component {
       this.showBlogCard=this.props.blogCard.filter(item=>{
         if(item.title.search(reg)!==-1){
           return true
-        }else if(item.desc.search(reg)!==-1){
-          return true
         }else{
           return false
         }
@@ -57,8 +55,7 @@ class Blog extends React.Component {
     let inputReg=new RegExp(this.state.input,'g')
     let newBlogCard = this.state.input ?  this.showBlogCard.map(item=>(
       {...item,
-        title:item.title.replace(inputReg,`<span style='color:red'>${this.state.input}</span>`),
-        desc:item.desc.replace(inputReg,`<span style='color:red'>${this.state.input}</span>`)
+        title:item.title.replace(inputReg,`<span style='color:red'>${this.state.input}</span>`)
       }
     ))
     :
