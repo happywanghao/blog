@@ -23,7 +23,7 @@ class BlogCard extends React.Component {
         color:'#fff'
       }
     }
-    let address = `/detailed/work/${this.props.url}`
+    let address = `/detailed/blog/${this.props.url}`
     return(
       <div className="col-sm-6 col-md-4">
         <div className="thumbnail">
