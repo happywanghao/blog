@@ -215,9 +215,12 @@ a:hover,a:focus,a:active,a:visited{
   font-weight: 600;
 }
 .thumbnail{
-  max-width: 381px;
+  box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px;
+  border-radius: 2px;
+  max-width: 850px;
   margin: 0 auto;
   margin-bottom: 20px;
+  padding: 0;
 }
 .row{
   margin: 0;
